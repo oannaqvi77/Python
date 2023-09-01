@@ -711,6 +711,156 @@ while a>0:
     print(d)
 
 
+# In[1]:
+
+
+#min function
+n=[5,-10,4,1.2]
+min_no=n[0]
+i=[]
+for i in n:
+    if min_no > i:
+        min_no=i
+print(min_no)
+
+
+# In[2]:
+
+
+#max function
+n=[5,-10,4,1.2]
+max_no=n[0]
+i=[]
+for i in n:
+    if max_no < i:
+        max_no=i
+print(max_no)
+
+
+# In[3]:
+
+
+#mean function
+n=(1,2,3,4,5,6,7,8,9)
+sm=0
+count=0
+i=[]
+for i in n:
+    sm=sm+i
+    count=count+1
+avg=sm/count
+print(avg)
+
+
+# In[4]:
+
+
+#median of odd of elements
+list=[1,2,3,4,5,6,7,8,9]
+count=0
+for i in list:
+    count=count+1
+index=int((count+1)/2)
+print(list[index-1])
+
+
+# In[6]:
+
+
+#median of even of elements
+list=[1,2,3,4,5,6,7,8]
+count=0
+for i in list:
+    count=count+1
+index1=(count)//2
+index2=(count+2)//2
+print(list[index1-1])
+print(list[index2-1])
+avg
+
+
+# In[7]:
+
+
+n=[3,5.4,2,3,4,12, 9000000, 8000000]
+count=0
+for i in n:
+    count=count+1
+    
+index1=(count+1)//2
+index2=index1 + 1
+print(list[index1-1])
+print(list[index2-1])
+median = (list[index1-1] + list[index2-1])/2
+median
+
+
+# In[21]:
+
+
+n=[1,2,3,4,5,3,3]
+count=0
+my_dict={}
+for i in n:
+    my_dict[i]=0
+print(my_dict)
+
+for i in n:
+    my_dict[i]=my_dict[i]+1
+print(my_dict)
+
+a=list(my_dict.values())[0]
+print(a)
+for v in my_dict.values():
+    if v>=a:
+        a=v
+print(a)
+l=[]
+for k,v in my_dict.items():
+    if v==a:
+        l.append(k)
+
+if l == list(my_dict.keys()):
+    print("no mode")
+else:
+    print(l)
+    
+
+
+# In[13]:
+
+
+n = [1, 2, 3, 4, 5, 3, 3]
+my_dict = {}
+
+# Count the occurrences of each value in the list n
+for i in n:
+    if i in my_dict:
+        my_dict[i] += 1
+    else:
+        my_dict[i] = 1
+
+# Find the maximum count
+max_count = 0
+for value in my_dict.values():
+    if value > max_count:
+        max_count = value
+
+# Initialize an empty list to store the modes
+modes = []
+
+# Find all values that have the maximum count
+for key, value in my_dict.items():
+    if value == max_count:
+        modes.append(key)
+
+# Check if there are modes
+if len(modes) == len(my_dict):
+    print("No mode")
+else:
+    print("Modes:", modes)
+
+
 # In[ ]:
 
 
